@@ -1,0 +1,24 @@
+<resources>
+    <color name="system_background">#F1F1F1</color>
+    <color name="primary_text">#333333</color>
+    <color name="secondary_text">#6DBE45</color>
+    <color name="tertiary_text">#4682B4</color>
+    <color name="stroke_color">#FFA500</color>
+    <color name="accent_color">#FFDD00</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#6DBE45</color>
+    <color name="blue">#4682B4</color>
+    <color name="light_gray">#F1F1F1</color>
+    <color name="dark_gray">#333333</color>
+    <color name="orange">#FFA500</color>
+    <color name="yellow">#FFDD00</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="gaugeBackground">#40E0D0</color>
+    <color name="gaugeCenterCircle">#000000</color>
+    <color name="gaugeArc">#000000</color>
+    <color name="gaugeNeedle">#8A2BE2</color>
+</resources>

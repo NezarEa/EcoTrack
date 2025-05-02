@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/system_background"
+    tools:context=".Content.Dashbord.AnalyticsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- ScrollView can only have one direct child, so we use a single vertical LinearLayout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Electricity Usage Title -->
+            <TextView
+                android:id="@+id/tvElectricityUsageTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Electricity Usage"
+                android:textColor="#333333"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp" />
+
+            <!-- Grid Layout for Cards -->
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/gridLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:columnCount="2"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                app:rowCount="2">
+
+                <!-- Card 1: Live kW -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardLiveKw"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="6dp"
+                    app:layout_columnWeight="1"
+                    app:layout_columnSpan="1"
+                    app:layout_rowSpan="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="LIVE kW"
+                                android:textColor="#888888"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_alignParentEnd="true"
+                                android:background="@drawable/circle_background_blue"
+                                android:contentDescription="Live kW icon"
+                                android:padding="6dp"
+                                android:src="@drawable/ic_electricity" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvLiveKwValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="15"
+                            android:textColor="#333333"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvLiveKwUnit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="/ 0.5 kWh"
+                            android:textColor="#666666"
+                            android:textSize="16sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Compared to Yesterday"
+                                android:textColor="#888888"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="↓ 7.5%"
+                            android:textColor="#16A34A"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card 2: kWh/day -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardKwhDay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="6dp"
+                    app:layout_columnWeight="1"
+                    app:layout_columnSpan="1"
+                    app:layout_rowSpan="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="kWh/day"
+                                android:textColor="#888888"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_alignParentEnd="true"
+                                android:background="@drawable/circle_background_blue"
+                                android:contentDescription="kWh/day icon"
+                                android:padding="6dp"
+                                android:src="@drawable/ic_electricity" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvKwhDayValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="2758"
+                            android:textColor="#333333"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvKwhDayUnit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="kWh"
+                            android:textColor="#666666"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/tvKwhDayMonthToDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Month to Date (30 / 140 kWh)"
+                            android:textColor="#888888"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card 3: Prev Month -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardPrevMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="6dp"
+                    app:layout_columnWeight="1"
+                    app:layout_columnSpan="1"
+                    app:layout_rowSpan="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PREV MONTH (140/180 kWh)"
+                                android:textColor="#888888"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_alignParentEnd="true"
+                                android:background="@drawable/circle_background_blue"
+                                android:contentDescription="Previous month icon"
+                                android:padding="6dp"
+                                android:src="@drawable/ic_electricity" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvPrevMonthValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="10657"
+                            android:textColor="#333333"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvPrevMonthUnit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="kWh"
+                            android:textColor="#666666"
+                            android:textSize="16sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Estimated Bill Forecast"
+                                android:textColor="#888888"
+                                android:textSize="14sp" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="↑ 7.5%"
+                            android:textColor="#EF4444"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Card 4: Usage Analysis -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardUsageAnalysis"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="6dp"
+                    app:layout_columnWeight="1"
+                    app:layout_columnSpan="1"
+                    app:layout_rowSpan="1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Usage Analysis"
+                                android:textColor="#888888"
+                                android:textSize="14sp" />
+
+                            <ImageView
+                                android:layout_width="32dp"
+                                android:layout_height="32dp"
+                                android:layout_alignParentEnd="true"
+                                android:background="@drawable/circle_background_blue"
+                                android:contentDescription="Usage analysis icon"
+                                android:padding="6dp"
+                                android:src="@drawable/ic_electricity" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:id="@+id/tvUsageAnalysisValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="15 %"
+                            android:textColor="#333333"
+                            android:textSize="28sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvUsageAnalysisCompare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Compared to Competitors"
+                            android:textColor="#888888"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tvUsageAnalysisPercentage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="↓ 7.5% better"
+                            android:textColor="#16A34A"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.gridlayout.widget.GridLayout>
+
+            <!-- Monthly Usage Trend Title -->
+            <TextView
+                android:id="@+id/tvMonthlyUsageTrendTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:text="Monthly Usage Trend"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <!-- Chart Container -->
+            <LinearLayout
+                android:id="@+id/chartContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Pie Chart View -->
+                <com.github.mikephil.charting.charts.PieChart
+                    android:id="@+id/pieChartMonthlyUsage"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
+
+                <!-- Monthly Data List -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMonthlyData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    tools:itemCount="6"
+                    tools:listitem="@layout/item_monthly_usage" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

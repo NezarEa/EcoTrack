@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/system_background"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/system_background"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".Content.Dashbord.DashboardFragment">
+
+        <com.ecotrack.Content.Dashbord.Adapter.GaugeView
+            android:id="@+id/gaugeView"
+            android:layout_width="380dp"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            app:centerCircleColor="@color/blue"
+            app:arcColor="@color/blue"
+            app:needleColor="@color/black"
+            app:gaugeBackgroundColor="@color/system_background"
+            app:initialValue="25"
+            app:startAngle="180"
+            app:sweepAngle="180" />
+
+
+        <!-- CardView for Current Consumption -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewConsumption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/gaugeView"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:elevation="8dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="start"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/tvCurrentConsumption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Current Consumption: --kWh"
+                    android:textSize="20sp"
+                    android:textColor="#333333"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvTotalCost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Cost: -- MAD"
+                    android:textSize="16sp"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:id="@+id/tvHighestConsumptionMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Highest Consumption Month: --"
+                    android:textSize="16sp"
+                    android:textColor="#333333" />
+
+                <TextView
+                    android:id="@+id/tvSavingRecommendations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Energy Saving Recommendations:"
+                    android:maxLines="3"
+                    android:textSize="14sp"
+                    android:textColor="#333333" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Main Power Reading -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="180dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvPowerValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="480W"
+                android:textColor="#333333"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvResponseTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="176ms"
+                android:textColor="#BBBBBB"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Left Reading -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="200dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMinPower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14W"
+                android:textColor="#4CD964"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvMinResponseTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="142ms"
+                android:textColor="#BBBBBB"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <!-- Right Reading -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="200dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvMaxPower"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="1.303W"
+                android:textColor="#FF3B80"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvMaxResponseTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="134ms"
+                android:textColor="#BBBBBB"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

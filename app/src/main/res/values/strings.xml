@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">EcoTrack</string>
+    <string name="default_web_client_id">320912278898-2svi3r76fe42boj4c1vucbksq5f2sm4q.apps.googleusercontent.com</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Title_OnBoarding">Energy Consumption Tracking App</string>
+    <string name="description_Onboarding">This app allows users to track and reduce their home energy consumption. It provides features to visualize consumption statistics and offers energy-saving tips to help reduce usage and improve energy efficiency.</string>
+    <string name="Title_connection">Track Your Energy Consumption</string>
+    <string name="Descriprtion_connection">Sign in to monitor and reduce your energy usage</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="privacy_policy">By continuing, you agree to our Terms of Service and Privacy Policy</string>
+</resources>
